@@ -83,7 +83,7 @@ bash scripts/maple/xd_train_maple.sh RSICD 2
 bash scripts/maple/xd_train_maple.sh RSICD 3
 ```
 
-* Now evaluate RSICD model on downstream datasets.
+* Now evaluate RSICD model on all other datasets.
 
 ```bash
 for SEED in 1 2 3
@@ -95,8 +95,8 @@ done
 ```
 
 #### (3) Domain Generalization 
-We use imagenet trained MaPLe model for domain generalization experiments. The steps are similar to above cross-dataset experiments, however, model is evaluated on imagenet variants.
-* Evaluate imageNet model on variants ofRSICD (domain shift datasets).
+ The steps are similar to the above cross-dataset experiments, however, the trained model is evaluated on the entire datasets including both training and testing.
+
 
 ```bash
 for SEED in 1 2 3
